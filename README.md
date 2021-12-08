@@ -1,4 +1,4 @@
-# Snippet
+# Snippet Javascript(e React ),CSS,HTML
 Ciao,
 questi file che vedete sono dei frammenti di codice per visual studio code che io mi sono scritto man mano e che possono aiutarvi nella scrittutra del codice in quanto con dei comandi rapidi (Shortcut) potete scrivere del codice più velocemente (e anche se non vi ricordate la sintassi di alcuni metodi).
 Procedere come segue:
@@ -9,6 +9,7 @@ Procedere come segue:
 5.  salvare
 6. usare
 
+# Snippet Javascript(and React ),CSS,HTML
 Hello,
 these files you see are code snippets for visual studio code that I have written gradually and that can help you in writing the code as with shortcuts you can write code faster (and even if you don't remember the syntax of some methods).
 Proceed as follows:
