@@ -16,12 +16,16 @@
 	"fetch snippet": {
 			"prefix": "fetch",
 			"body": [
-				"fetch('./path/to/api').then(function(response){",
+				"const getUrl ='https://...'",
+				"fetch('getUrl')",
+				".then(function(response){",
 				"return response.json();",
-				"}).then(function(json){",
+				"})",
+				".then(function(json){",
 					"classe = json;",
 					"console.log('Dati', classe)",
-				"}).catch(function(err){",
+				"})",
+				".catch(function(err){",
 				"console.log('Fetch problem' + err.message);",
 				"})",
 			],
@@ -355,26 +359,25 @@
 	 "description": "USeContext method"
  },
 
- "API React ": {
-	"prefix": "api-react",
+ "API React GET ": {
+	"prefix": "api-react-get",
 	"body": [
 		"const NewCall = async (name) =>{",
 			"setLoading(true)",
 			"try{",
 			 "const result = await axios({",
-			  "baseURL: 'https://www.thecocktaildb.com/api',",
-			   "url: 'json/v1/1/search.php',",
+			  "baseURL: 'https://',",
+			   "url: 'json/......',",
 			   "method: 'GET',",
 			   "params:{",
 				"// parametri ",
 			   "},",
 			 "})",
-			 "const drinks = result.data.drinks",
-			 "setDrinks(drinks)",
+			 "const qualcosa = result.data.qualcosa",
+			 "setQualcosa(Qualcosa)",
 			 "console.log(result)",
 			"}",
-		  
-			"catch(e){",
+		     "catch(e){",
 			 "setError(e)",
 			 "console.log('Il mio errore è', e)",
 			"}",
@@ -400,9 +403,9 @@
 			"validate,",
 			"onSubmit: async function(name){ ",
 			  "try{",
-				"const url='https://www.thecocktaildb.com/api/json/v1/1/search.php?s='+name.name'",
+				"const url='https://'",
 				"const res=await axios.get(url)",
-				"setRsultCocktail(res.data.drinks)",
+				"setRsultCocktail(res.data.QUALCOSA)",
 			 "}",
 			  "catch(e){",
 				"console.log(e)",
@@ -412,7 +415,37 @@
 	],
 	 "description": "chiamata API React Con Formick"
  },
-
+ "API React POST ": {
+	"prefix": "api-react-post",
+	"body": [
+		"const NewCall = async (name) =>{",
+			"setLoading(true)",
+			"try{",
+			 "const result = await axios({",
+			  "baseURL: 'https://',",
+			   "url: 'json/.......',",
+			   "method: 'POST',",
+			   "params:{",
+				"// parametri ",
+			   "},",
+			 "})",
+			 "const qualcosa = result.data.qualcosa",
+			 "setQualcosa(Qualcosa)",
+			 "console.log(result)",
+			"}",
+		  
+			"catch(e){",
+			 "setError(e)",
+			 "console.log('Il mio errore è', e)",
+			"}",
+			"finally{",
+			 "setLoading(false)",
+			"}",
+		   "}",
+		  	
+	],
+	 "description": "chiamata API React"
+ },
 
 }
 
