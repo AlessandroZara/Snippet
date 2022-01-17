@@ -447,35 +447,33 @@
 	],
 	 "description": "chiamata API React"
  },
- "API con UseEffect ": {
-	"prefix": "api-react-post-useEffect",
+ "Chiamata Api con UseEffect": {
+	"prefix": "api-get-useEffetc",
 	"body": [
-		"useEffect(() => {",
-			"setTimeout(() => {",
-			  "(async () => {",
-				"try {",
-				  "const res = await api.getProduct(id);",
-		
-				  "console.log('product', res);",
-		
-				  "setData(res.data);",
-				"} catch (err) {",
-				  "if (err.response) {",
-					"console.warn('response error', err.response);",
-				  "} else {",
-					"console.error('An error occurred');",
-				  "}",
-				"} finally {",
-				  "setLoading(false);",
-				"}",
-			  "})();",
-			"}, 2000);",
-		  "}, []); // eslint-disable-line react-hooks/exhaustive-deps",
-		  	
+	  "const fetchProduct = async(name) => {",
+	  "        try {",
+	  "            setLoading(true)",
+	  "            setError(undefined)",
+	  "            const result = await axios ({",
+	  "                baseURL: 'https://www.thecocktaildb.com/api',",
+	  "                url:'json/v1/1/search.php',",
+	  "                method:'GET',",
+	  "                headers:{Accept: '*/*'},",
+	  "                params:{f:name},",
+	  "            })",
+	  "            //debagger",
+	  "            setData(result.data.drinks)",
+	  "            return result.data.drinks",
+	  "        } catch (error) {",
+	  "            console.log(error)",
+	  "            setError(error)",
+	  "            throw error;",
+	  "        } finally {setLoading(false)}",
+	  "    }",
+	  ""
 	],
-	 "description": "chiamata API React"
- },
- 
+	"description": "Chiamata Api con UseEffect"
+  },
 }
 
 
